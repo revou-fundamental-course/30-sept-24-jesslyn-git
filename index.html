@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Suhu</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Kalkulator Suhu</h1>
+       </header>
+    <main>
+        <section id="input-section">
+            <form id="temp-form">
+                <label id="temp-form-label" for="inputTemp1">Celcius (°C):</label>
+                <input type="number" id="inputTemp1" placeholder="Masukkan suhunya" />
+            </form>
+        </section>
+
+        <section id="buttons-section">
+            <button id="convert-btn" onclick="convert()">Konversi</button>
+            <button id="reset-btn" onclick="resetFields()">Reset</button>
+            <button id="reverse-btn" onclick="reverse()">Reverse</button>
+        </section>
+
+        <section id="result-section">
+            <form>
+                <label id="result-label" for="display">Fahrenheit (°F):</label>
+                <textarea type="number" id="display" readonly></textarea>
+            </form>
+        </section>
+
+        <section id="explanation-section" style="display:none">
+            <form>
+                <label for="explanation-celsius">Cara Kalkulkasi:</label>
+                <textarea id="explanation-celsius" readonly style="display: none;"></textarea>
+                <textarea id="explanation-fahrenheit" readonly style="display: none;"></textarea>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <section id="footer-celsius" style="display: block;">
+            <div>
+                <h2>Cara Konversi Dari Celcius (°C) ke Fahrenheit (°F)</h2>
+                <p>Suhu <i>S</i> dalam derajat Fahrenheit (°F) sama dengan suhu <i>S</i> dalam derajat Celcius (°C) dikali 
+                    <span style="font-size: 1.2em;">9/5</span>" ditambah 
+                    <span style="font-size: 1.2em;">32</span></p>
+                <p>S(°F) = (S(°C) × 9/5) + 32</p>
+                <p>atau</p>
+                <p>S(°F) = (S(°C) × 1.8) + 32</p>
+            </div>
+        </section>
+        <section id="footer-fahrenheit" style="display: none;">
+            <div>
+                <h2>Cara Konversi Dari Fahrenheit (°F) ke Celcius (°C)</h2>
+                <p>Suhu <i>S</i> dalam derajat Celsius (°C) sama dengan suhu <i>S</i> dalam derajat Fahrenheit (°F) dikurangi
+                    <span style="font-size: 1.2em;">32</span>
+                    dikali 
+                    <span style="font-size: 1.2em;">5/9</span> 
+                    </p>
+                <p>S(°C) = (S(°F) - 32) × 5/9</p>
+                <p>atau</p>
+                <p>S(°C) = (S(°F) - 32) × 0.56</p>
+            </div>
+        </section>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
